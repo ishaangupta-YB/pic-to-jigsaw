@@ -1,0 +1,23 @@
+{
+  "name": "pic-to-jigsaw",
+  "version": "1.0.0",
+  "description": "An interactive jigsaw puzzle web application that creates puzzles from uploaded images",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx wrangler pages dev .",
+    "deploy": "npx wrangler pages deploy .",
+    "build": "rm -rf dist && mkdir -p dist/css dist/js && cp index.html _headers dist/ && cp css/styles.css dist/css/ && cp js/app.js dist/js/ && sed -i.bak '/<script src=\"js\\/iframe-highlight.js\"><\\/script>/d' dist/index.html && rm dist/index.html.bak",
+    "build:all": "rm -rf dist && mkdir -p dist/css dist/js && cp index.html _headers dist/ && cp css/styles.css dist/css/ && cp js/*.js dist/js/",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "jigsaw",
+    "puzzle",
+    "game",
+    "canvas",
+    "interactive",
+    "cloudflare-pages"
+  ],
+  "author": "",
+  "license": "MIT"
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Jigsaw Puzzle</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Interactive Jigsaw Puzzle</h1>
+            <a href="https://x.com/ishaangtwt" target="_blank" rel="noopener noreferrer" class="twitter-link" title="Follow me on Twitter">
+                <svg class="twitter-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+                <span>Follow me on Twitter</span>
+            </a>
+        </div>
+
+        <div class="main-content">
+            <div class="sidebar">
+                <div class="control-panel">
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-icon">📷</div>
+                        <div class="upload-text">Upload Your Image</div>
+                        <div class="upload-hint">Drag & drop or click to browse</div>
+                        <input type="file" id="fileInput" accept="image/*">
+                    </div>
+
+                    <div class="controls">
+                        <div class="control-group">
+                            <label for="difficultySelect">Puzzle Difficulty</label>
+                            <select id="difficultySelect">
+                                <option value="4">4 x 4 (16 pieces) - Easy</option>
+                                <option value="6">6 x 6 (36 pieces) - Medium</option>
+                                <option value="8" selected>8 x 8 (64 pieces) - Hard</option>
+                                <option value="10">10 x 10 (100 pieces) - Expert</option>
+                            </select>
+                        </div>
+
+                        <div class="control-buttons">
+                            <button id="startBtn" disabled>Start Puzzle</button>
+                            <button id="shuffleBtn" disabled>Shuffle</button>
+                        </div>
+
+                        <div class="control-buttons">
+                            <button id="hintBtn" disabled>Show Hint</button>
+                            <button id="resetBtn">Reset</button>
+                        </div>
+
+                        <div class="stats">
+                            <div class="stat-card">
+                                <div class="stat-value" id="piecesPlaced">0</div>
+                                <div class="stat-label">Pieces Placed</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value" id="timer">00:00</div>
+                                <div class="stat-label">Time</div>
+                            </div>
+                        </div>
+
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="puzzle-area">
+                <div class="puzzle-board">
+                    <div class="canvas-container">
+                        <canvas id="puzzleCanvas" width="600" height="600"></canvas>
+                        <div class="hint-overlay" id="hintOverlay" style="display: none;"></div>
+                    </div>
+                </div>
+                <div id="welcomeMessage" class="loading">
+                    <p>Upload an image to start your puzzle adventure!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/iframe-highlight.js"></script>
+</body>
+</html>

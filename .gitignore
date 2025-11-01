@@ -1,0 +1,29 @@
+# Cloudflare
+.wrangler/
+wrangler.toml
+
+# Build output
+dist/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backups
+*.backup
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+index.html.backup
+CLAUDE.md
