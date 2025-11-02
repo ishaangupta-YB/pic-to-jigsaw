@@ -182,6 +182,7 @@ class JigsawPuzzle {
         this.timerElement.textContent = '00:00';
         this.image = null;
         this.pieces = [];
+        this.placedPieces = 0;
         this.startBtn.disabled = true;
         this.shuffleBtn.disabled = true;
         this.hintBtn.disabled = true;
@@ -422,15 +423,8 @@ class JigsawPuzzle {
     }
 
     drawPreview() {
-        // Draw a small preview of the uploaded image
-        if (this.image) {
-            const maxSize = 100;
-            const scale = Math.min(maxSize / this.image.width, maxSize / this.image.height);
-            const width = this.image.width * scale;
-            const height = this.image.height * scale;
-
-            // This could be used for image preview if needed
-        }
+        // Preview functionality placeholder for future enhancement
+        // Could be used to show a thumbnail of the uploaded image
     }
 }
 
